@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>LOG IN</p>
+      <img src="img/fingerprint1.gif" alt="finger" />
+      <form>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="email" required />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            minlength="8"
+            required
+          />
+          <span class="non-show"
+            >Password has contain min 8 symbols, numbers, uppercase and lowcase
+            letters
+          </span>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            name="passwordConfirm"
+            id="passwordConfirm"
+            data-confirm="password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            placeholder="confirm password"
+            minlength="8"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input name= "logIn" class="exit" type="submit" value="LOGIN" />
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
